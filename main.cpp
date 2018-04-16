@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
 		cout<<"\n\n";
 		
 		if(serial==1){
-			
+			myTask.addTask();
 		}
 		else if(serial==2){
 			
