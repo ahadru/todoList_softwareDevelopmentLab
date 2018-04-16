@@ -2,6 +2,8 @@
 #include "todo.h"
 using namespace std;
 
+//main blocks declaration ..
+bool fexists(const char *filename);
 struct task{
 	int counter;
 	string description;
@@ -13,6 +15,12 @@ struct task{
 int main(int argc, char** argv) {
 	int serial;
 	todo myTask;
+	
+	if(fexists("data")==0){
+		ofstream file("data");
+		file.close();
+	}
+	
 	while(1){
 		cout<<"\n\n1.Add Task\n";
 		cout<<"2.Show Task\n";
@@ -40,4 +48,10 @@ int main(int argc, char** argv) {
 		}
 	}
 	return 0;
+}
+
+//check is there description file exists...
+bool fexists(const char *filename) {
+  ifstream ifile(filename);
+  return (bool)ifile;
 }
