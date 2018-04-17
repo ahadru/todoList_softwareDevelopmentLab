@@ -3,6 +3,7 @@
 using namespace std;
 
 //main blocks declaration ..
+int count;
 bool fexists(const char *filename);
 struct task{
 	int counter;
@@ -19,6 +20,8 @@ int main(int argc, char** argv) {
 	if(fexists("data")==0){
 		ofstream file("data");
 		file.close();
+		ofstream file1("cocunter");
+		file1.close();
 	}
 	
 	while(1){
