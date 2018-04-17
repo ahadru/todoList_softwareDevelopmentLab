@@ -3,14 +3,7 @@
 using namespace std;
 
 //main blocks declaration ..
-int count;
 bool fexists(const char *filename);
-struct task{
-	int counter;
-	string description;
-	int time[2];
-	int date[3];
-};
 
 /*Main Driver Blocks*/
 int main(int argc, char** argv) {
@@ -20,7 +13,8 @@ int main(int argc, char** argv) {
 	if(fexists("data")==0){
 		ofstream file("data");
 		file.close();
-		ofstream file1("cocunter");
+		ofstream file1("counter");
+		file1<<"0";
 		file1.close();
 	}
 	
