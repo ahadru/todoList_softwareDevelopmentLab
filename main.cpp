@@ -38,7 +38,19 @@ int main(int argc, char** argv) {
 			myTask.refresh();
 		}
 		else if(serial==4){
-			
+			myTask.showTask();
+			int optNum;
+		
+			//option for deleting a task..
+			cout<<"Are you want delete a task?\n";
+			cout<<"1.Yes\n2.No\n\n";
+			cin>>optNum;
+			if(optNum==1){
+				myTask.deleteTask();	
+			}
+			else{
+				continue;
+			}
 		}
 		else{
 			cout<<"Bye Bye......\n";
