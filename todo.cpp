@@ -65,17 +65,22 @@ void todo::showTask(){
 	
 	//
 	ifstream taskFile("data"); 
+	cout<<"....................................................\nAll Tasks..:\n\n";
 	for(int i=1;i<=count;i++){
+		
+		//read from the the file to stream
 		taskFile>>shape.countTask;
 		taskFile>>shape.time[0]>>shape.time[1];
 		taskFile>>shape.date[0]>>shape.date[1]>>shape.date[2];
 		taskFile.ignore();
 		getline(taskFile,shape.description);
-	
+		
+		//print to the std out..
 		cout<<shape.countTask<<". "<<shape.time[0]<<": "<<shape.time[1]<<", "<<shape.date[0]<<"-"<<shape.date[1]<<"-"<<shape.date[2]<<endl;
 		cout<<"Description:"<<endl;
 		cout<<shape.description<<endl;
 		cout<<endl;
 	}
+	cout<<"......................................................\n";
 	taskFile.close();
 }
