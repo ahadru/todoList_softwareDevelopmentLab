@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
 			myTask.addTask();
 		}
 		else if(serial==2){
-			
+			myTask.showTask();
 		}
 		else if(serial==3){
 				myTask.refresh();
