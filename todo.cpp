@@ -44,12 +44,6 @@ void todo::addTask(){
 }
 
 
-
-
-
-
-
-
 //This function delete a task...
 void todo::deleteTask(){
 	int delNum,i;
@@ -103,12 +97,6 @@ void todo::deleteTask(){
 	counter1.close();
 	
 }
-
-
-
-
-
-
 
 
 //Thid function refresh the state..
