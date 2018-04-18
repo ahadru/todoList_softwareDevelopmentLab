@@ -35,12 +35,13 @@ int main(int argc, char** argv) {
 			myTask.showTask();
 		}
 		else if(serial==3){
-				myTask.refresh();
+			myTask.refresh();
 		}
 		else if(serial==4){
 			
 		}
 		else{
+			cout<<"Bye Bye......\n";
 			break;
 		}
 	}
